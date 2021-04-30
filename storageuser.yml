@@ -1,6 +1,6 @@
 --- 
 - name: setup storage user
-  hosts: data1
+  hosts: [ storage ]
   become: true
 
   tasks:
