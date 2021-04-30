@@ -5,7 +5,7 @@
   become: yes
 
   tasks:
-    - name: ensure group storagegroup existws
+    - name: ensure group storagegroup exists
       group:
         name: storagegroup
         state: present
