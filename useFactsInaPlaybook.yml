@@ -1,0 +1,16 @@
+---
+- hosts: data1
+  vars: 
+    packagename: 
+            - httpd
+            - mariadb 
+     
+  tasks:
+  - name: how to use facts
+    debug:
+      msg: The package to install on {{ ansible_facts.default_ipv4.address }} is
+
+  - name: Prints packages
+    debug:
+      msg: "{{ item }}"
+    with_items: "{{ packagename }}"

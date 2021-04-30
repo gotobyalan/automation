@@ -1,0 +1,11 @@
+--- 
+- name: create new volume 
+  hosts: data1
+  become: true
+
+  tasks:
+  - name: Creates a volume group
+    lvg:
+      vg: vg1 
+      pvs: /dev/vdb1
+      pesize: 4

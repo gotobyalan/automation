@@ -1,0 +1,10 @@
+--- 
+- name: create file system 
+  hosts: data1
+  become: true
+
+  tasks:
+  - name: Create an XFS filesystem
+    filesystem:
+      fstype: XFS
+      dev: /dev/vg1/lv1

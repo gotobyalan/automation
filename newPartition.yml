@@ -1,0 +1,12 @@
+--- 
+- name: create new partition 
+  hosts: data1
+  become: true
+  
+  tasks:
+  - name: New 8GB partition
+    parted:
+      device: /dev/vdb
+      number: 1
+      state: present
+      part_end: 8GB
