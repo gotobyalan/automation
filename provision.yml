@@ -1,13 +1,20 @@
---- 
+---
 - name: provision qemu VM
   hosts: localhost
   become: true
 
-  tasks: 
+  tasks:
     - name: "Create a host"
       redhat.satellite.host:
         username: "admin"
         password: "orange45"
         server_url: "https://olivia.homelab.com"
-        name: "test-host"
+        name: "alcon-test1.homelab.com"
+        hostgroup: toby-small-8.3-vm
+        compute_resource: toby
+        organization: aleberkn-lab
+        location: basement
+        operatingsystem: RedHat 8.3
+        provision_method: image
         state: present
+
