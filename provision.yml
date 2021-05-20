@@ -3,10 +3,11 @@
   hosts: localhost
   become: true
 
-  - name: "Create a host"
-  toby.homelab.com:
-    username: "admin"
-    password: "orange45"
-    server_url: "https://olivia.homelab.com"
-    name: "test-host"
-    state: present
+  tasks: 
+    - name: "Create a host"
+      toby.homelab.com:
+        username: "admin"
+        password: "orange45"
+        server_url: "https://olivia.homelab.com"
+        name: "test-host"
+        state: present
