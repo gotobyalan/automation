@@ -1,9 +1,9 @@
 ---
-- name: provision qemu VM
+- name: create pfizer VM 
   hosts: localhost
   become: true
 
-  tasks:
+    tasks:
     - name: "Create host pfizer-test1"
       redhat.satellite.host:
         username: "admin"
@@ -18,6 +18,10 @@
         provision_method: image
         state: present
 
+- name: create jnj VM
+  hosts: localhost
+  become: true
+  tasks: 
     - name: "Create host jnj-test1"
       redhat.satellite.host:
         username: "admin"
@@ -33,6 +37,10 @@
         state: present
 
 
+- name: create alcon VM
+  hosts: localhost
+  become: true
+  tasks: 
     - name: "Create host alcon-test1"
       redhat.satellite.host:
         username: "admin"
