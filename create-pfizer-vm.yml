@@ -1,9 +1,9 @@
 ---
-- name: create pfizer VM 
+- name: create pfizer VM
   hosts: localhost
   become: true
-  var_files:
-    - ./create-vm-vars.yml
+  vars_files:
+    - /home/tobyalan/automation/vm-vars.yml
 
   tasks:
   - name: "Create host pfizer-test1"
@@ -11,7 +11,7 @@
       username: "admin"
       password: "orange45"
       server_url: "https://olivia.homelab.com"
-      name: { vm-name }
+      name: pfizer-test1.homelab.com
       hostgroup: toby-small-8.3-vm
       compute_resource: toby
       organization: aleberkn-lab
