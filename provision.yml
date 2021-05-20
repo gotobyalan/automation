@@ -5,7 +5,7 @@
 
   tasks: 
     - name: "Create a host"
-      toby.homelab.com:
+      redhat.satellite.host:
         username: "admin"
         password: "orange45"
         server_url: "https://olivia.homelab.com"
