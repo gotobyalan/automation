@@ -21,7 +21,8 @@
 - name: create jnj VM
   hosts: localhost
   become: true
-  tasks: 
+
+    tasks: 
     - name: "Create host jnj-test1"
       redhat.satellite.host:
         username: "admin"
@@ -40,7 +41,8 @@
 - name: create alcon VM
   hosts: localhost
   become: true
-  tasks: 
+
+    tasks: 
     - name: "Create host alcon-test1"
       redhat.satellite.host:
         username: "admin"
